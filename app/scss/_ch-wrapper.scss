@@ -1,0 +1,110 @@
+.ch_wrapper {
+    display: block;   
+    margin: 0;
+    width: 100%;
+    padding-left: 36px;
+
+
+
+    input[type=checkbox],
+    input[type=radio] {
+        display: none;       
+    }
+
+    label {
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-bottom: 0!important;
+        position: relative;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 300;
+        color: #37393A;
+        line-height: 22px;
+        &.xs {
+            font-size: 11px!important;
+            color: #666!important;
+        }
+        &.xl {
+            font-size: 14px!important;
+            color: #333!important;
+            @include media-breakpoint-down(sm) {
+                font-size: 13px !important;
+            }
+        }
+        @include media-breakpoint-down(xs) {
+            font-size: 11px;
+        }
+
+        span {
+            font: inherit;
+            text-decoration: underline;
+            color: inherit;
+            transition: color .3s ease;
+            &:hover {
+                color: #ed1105;
+            }
+        }       
+    }
+   
+    input[type=checkbox]:checked + label,
+    input[type=radio]:checked + label {
+        color: inherit;        
+    }
+
+
+    input[type=checkbox] + label:before,
+    input[type=radio] + label:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        background-color: #eff0f4;
+        //border: 1px solid #ffffff;
+       // box-shadow: inset 0 0 2px 1px rgba(240,240,240,0.7);
+        position: absolute;
+        top: 0;
+        left: -30px;
+        margin-right: 0;
+    }
+
+
+    input[type=radio] + label:before {       
+        //border-radius: 50%;		
+    }
+
+    input[type=checkbox]:checked + label:before,
+    input[type=radio]:checked + label:before {
+        content: "\2714";
+        font-size: 18px;
+        font-weight: normal;
+        color: #ed1105;
+        text-align: center;
+        line-height: 22px;
+    }
+
+    &.yellow {
+        input[type=checkbox]:checked + label:before,
+        input[type=radio]:checked + label:before{
+            color: #fdbd1c;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+    &.red {
+        input[type=checkbox]:checked + label:before,
+        input[type=radio]:checked + label:before {
+            color: #d50808;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+
+    //input[type=radio]:checked + label:before {
+    //	content: "";
+    //    background-color: #000;
+    //	box-shadow: inset 0 0 0 3px #fff;
+    //}
+}

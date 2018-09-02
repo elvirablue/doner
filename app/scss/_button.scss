@@ -1,0 +1,102 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 16px 30px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  color: #ffffff;
+  font-family: "Roboto Condensed", serif;
+  text-align: center;
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+  width: auto;
+  height: 68px;
+  border-radius: 34px;
+  background-color: #ff0e01 ;
+  cursor: pointer;
+  box-shadow: inset 0px -3px 5px 1px rgba(212,15,8,0.8),
+              inset 0px 3px 5px 1px rgba(255,94,83,1);
+
+  &.center {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &:hover {
+    box-shadow: inset 0px -3px 5px 1px rgba(255,94,83,1),
+                inset 0px 3px 5px 1px rgba(212,15,8,0.8);
+
+  }
+  &:active {
+    box-shadow: inset 0px -3px 5px 2px rgba(212,15,8,0.8),
+                inset 0px 3px 5px 2px rgba(212,15,8,0.8);
+  }
+  &[disabled], &[disabled]:hover, &[disabled]:active, &[disabled]:focus {
+    opacity: 0.7;
+    box-shadow: inset 0px -3px 5px 1px rgba(212,15,8,0.8),
+    inset 0px 3px 5px 1px rgba(255,94,83,1);
+  }
+  &.mono {
+    padding: 5px;
+    background-color: #ed1105;
+    box-shadow: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: "Roboto Condensed", serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      background-color: #ffffff;
+      color: #ed1105;
+    }
+    &:active {
+      box-shadow: inset 2px 2px 6px 1px rgba(0,0,0,0.15);
+      color: #ed1105;
+    }
+  }
+
+
+
+  &:hover, &:active, &:focus {
+    border: none;
+    outline: none;
+    text-decoration: none;
+
+  }
+  &:active {
+
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+
+
+.button-link {
+  display: block;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  color: #75aaf5;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover, &:active, &:focus {
+    outline: none;
+    border: none;
+    color: #75aaf5;
+    text-decoration: none;
+  }
+}
+
+
+

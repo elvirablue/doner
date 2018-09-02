@@ -1,0 +1,84 @@
+.packet {
+  padding-top: 65px;
+  padding-bottom: 30px;
+
+  .nav-tabs {
+    border: none;
+    max-width: 670px;
+    margin: 30px auto 20px;
+    justify-content: center;
+    .nav-link {
+      padding: 11px 27px;
+      border-radius: 24px;
+      background-color: transparent;
+      border: 1px solid transparent;
+      font-size: 18px;
+      color: rgb(28, 15, 13);
+      font-family: "Roboto Condensed", serif;
+      text-align: center;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      &:hover, &:focus, &.active, &.show {
+        border-color: red;
+      }
+
+    }
+
+  }
+  .tab-content {
+    padding: 0 0 0 110px;
+    .t1 {
+      font-size: 22px;
+      color: rgb(28,15,13);
+      font-family: "Roboto Condensed", serif;
+      padding-bottom: 15px;
+    }
+    ul {
+      padding-right: 50px;
+      li {
+        font-size: 14px;
+        line-height: 1.45;
+        color: rgb(28,15,13);
+        font-family: "Roboto", serif;
+        font-weight: 300;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .tab-content {
+      padding-left: 70px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .nav-tabs {
+      max-width: none;
+      .nav-link {
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 16px;
+      }
+    }
+    .tab-content {
+      padding-left: 20px;
+      ul {
+        padding-right: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .tab-content .t1 {
+      font-size: 20px;
+      padding-bottom: 8px;
+    }
+    .tab-content ul li {
+      font-size: 13px;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+
+  }
+}

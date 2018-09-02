@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1858.83 247.92">
+    <defs>
+        <style>
+            .cls-1,.cls-2{
+            fill:none;
+            stroke:#727678;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            stroke-width:2px;}
+            .cls-2{
+            stroke-dasharray:12.02
+            12.02;}
+        </style>
+    </defs>
+    <title>Ресурс 2</title>
+    <g id="Слой_2" data-name="Слой 2">
+        <g id="Layer_1" data-name="Layer 1">
+            <path class="cls-1" d="M212.73,57.05h6s0-2.24-.12-6"/>
+            <path class="cls-2"
+                  d="M218.42,39c-.13-10.29-.21-23.49,0-35.49a2.59,2.59,0,0,1,4.85-1.23c28.35,50.21,57.29,54.73,92.6,54.73H1822.15a35.67,35.67,0,0,1,35.68,35.68V211.25a35.67,35.67,0,0,1-35.68,35.67H36.68A35.67,35.67,0,0,1,1,211.25V92.73A35.67,35.67,0,0,1,36.68,57.05h170"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,195 @@
+.navbar {
+  $colorText: #ffffff;
+  height: 165px;
+  background-color: transparent;
+  padding: 0;
+  transition: background-color ease 0.3s;
+  &.fixed-top {
+    background-color: rgba(0,0,0,0.88);
+    box-shadow: 0 10px 40px 2px rgba(0,0,0,0.25);
+    height: 100px;
+    .navbar-brand {
+      height: 70px;
+      max-height: 70px;
+      overflow: hidden;
+      img {
+        width: 150px;
+        max-width: 150px;
+      }
+    }
+    .navbar-info {
+      padding-bottom: 0;
+      .phone {
+        font-size: 14px;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      height: 70px;
+      padding-top: 0;
+      .button.mono {
+        display: none;
+      }
+      .navbar-info .phone {
+        padding-right: 20px;
+        padding-bottom: 0;
+      }
+      .navbar-brand {
+        height: 50px;
+        max-height: 50px;
+        overflow: hidden;
+        img {
+          width: 105px;
+          max-width: 105px;
+        }
+      }
+    }
+  }
+
+
+  .navbar-toggler .navbar-toggler-icon {
+    width: 36px;
+    height: 36px;
+    border: none;
+    outline: none;
+    margin-right: 150px;
+    background-position: center;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-image: url("../img/ico/menu-close.svg");
+    transition: all 0.3s ease;
+  }
+  .navbar-toggler.collapsed .navbar-toggler-icon {
+    background-image: url("../img/ico/menu-open.svg");
+    background-size: 30px;
+    border: none;
+    outline: none;
+
+  }
+  .navbar-toggler {
+    order: 1;
+    position: relative;
+    z-index: 210;
+  }
+  .navbar-collapse {
+    order: 2;
+  }
+  .navbar-brand {
+    order: 1;
+    min-width: 180px;
+  }
+  .navbar-info {
+    order: 3;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 30px;
+    .phone {
+      font-size: 18px;
+      line-height: 1;
+      padding-bottom: 12px;
+      color: $colorText;
+      font-family: "Open Sans", 'Roboto', serif;
+      text-align: center;
+    }
+    .button {
+      width: 208px;
+      height: 48px;
+      border-radius: 24px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .navbar-nav {
+    padding: 0 80px;
+    width: 100%;
+    justify-content: space-between;
+    .nav-item.nav-link {
+      font-size: 17px;
+      color: $colorText;
+      font-family: "Roboto Condensed", serif;
+      font-weight: 400;
+      text-align: center;
+      text-decoration: none;
+      padding: 10px;
+      white-space: nowrap;
+      &:hover, &:active, &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .navbar-nav {
+      justify-content: center;
+      padding: 0;
+      .nav-item.nav-link {
+        padding: 10px 0.75vw;
+      }
+    }
+    .navbar-brand {
+      margin: 0;
+      min-width: 100px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+    padding-top: 10px;
+    .navbar-info .phone {
+      font-size: 18px !important;
+      padding-bottom: 0;
+    }
+    .navbar-toggler .navbar-toggler-icon {
+      margin-right: auto;
+    }
+    .navbar-nav .nav-item.nav-link {
+      text-align: left;
+    }
+    .navbar-collapse {
+      position: absolute;
+      z-index: 200;
+      top: -10px;
+      left: -15px;
+      padding: 100px 60px 20px 30px;
+      //background-color: #f9aa06;
+      background-color: rgba(0,0,0,0.88);
+      box-shadow: 0 10px 40px 2px rgba(0,0,0,0.25);
+      transition: height 0.2s ease-in;
+    }
+
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 10px 15px 0;
+    .navbar-info {
+      order: 2;
+      padding-bottom: 0;
+      .phone {
+        font-size: 16px !important;
+        padding-right: 0 !important;
+        padding-left: 20px !important;
+      }
+      .button {
+        display: none;
+      }
+    }
+    .navbar-brand {
+      order: 3;
+      min-width: 80px;
+      max-width: 100px;
+      width: 20vw;
+    }
+
+  }
+  @include media-breakpoint-down(xs) {
+    .navbar-toggler {
+      padding: 0;
+    }
+    .navbar-collapse {
+      right: -15px;
+      height: 100vh;
+
+    }
+  }
+}
